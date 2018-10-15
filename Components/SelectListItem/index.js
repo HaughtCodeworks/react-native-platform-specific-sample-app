@@ -19,7 +19,7 @@ const SelectListItem = ({ isSelected, itemLabel, updateSelectedItems }) => {
   return (
     <TouchableOpacity
       onPress={() => updateSelectedItems(itemLabel, isSelected)}
-      style={styles.row}
+      style={styles.itemContainer}
     >
       <Text style={styles.itemLabel}>{itemLabel}</Text>
       {getSelectedIcon(isSelected)}

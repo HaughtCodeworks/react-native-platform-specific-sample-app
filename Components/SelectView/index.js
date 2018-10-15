@@ -17,8 +17,7 @@ class SelectView extends Component {
     selectedLocations: {},
   };
 
-  updateSelectedIndex = event =>
-    this.setState({ selectedIndex: event.nativeEvent.selectedSegmentIndex });
+  updateSelectedIndex = selectedIndex => this.setState({ selectedIndex });
 
   updateSelectedItems = (itemLabel, isSelected) => {
     let { selectedItems } = this.state;
