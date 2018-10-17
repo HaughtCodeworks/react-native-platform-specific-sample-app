@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 
 import { View } from 'react-native';
 import SelectListControl from '../SelectListControl';
@@ -17,8 +16,7 @@ class SelectView extends Component {
     selectedLocations: {},
   };
 
-  updateSelectedIndex = event =>
-    this.setState({ selectedIndex: event.nativeEvent.selectedSegmentIndex });
+  updateSelectedIndex = selectedIndex => this.setState({ selectedIndex });
 
   updateSelectedItems = (itemLabel, isSelected) => {
     let { selectedItems } = this.state;
@@ -52,9 +50,5 @@ class SelectView extends Component {
     );
   }
 }
-
-SelectView.propTypes = {
-  list: PropTypes.object,
-};
 
 export default SelectView;

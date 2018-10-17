@@ -12,9 +12,12 @@ const SelectListControl = ({
 }) => (
   <View style={styles.controlContainer}>
     <SegmentedControlIOS
-      values={segmentTitles}
+      onChange={event =>
+        updateSelectedIndex(event.nativeEvent.selectedSegmentIndex)
+      }
       selectedIndex={selectedIndex}
-      onChange={event => updateSelectedIndex(event)}
+      values={segmentTitles}
+      tintColor="#f46969"
     />
   </View>
 );
