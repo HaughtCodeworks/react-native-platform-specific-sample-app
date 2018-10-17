@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 
 import { View } from 'react-native';
 import SelectListControl from '../SelectListControl';
@@ -51,9 +50,5 @@ class SelectView extends Component {
     );
   }
 }
-
-SelectView.propTypes = {
-  list: PropTypes.object,
-};
 
 export default SelectView;
